@@ -20,5 +20,25 @@ module.exports = {
   
     // Additional setup
     setupFilesAfterEnv: ['./src/jest.setup.ts'],
+
+    //Code Coverage
+    collectCoverage: true,
+    collectCoverageFrom: [
+      "src/**/*.ts",          // Include all TypeScript files in src/
+      "src/**/*.tsx",         // Include all TypeScript React files
+      "!src/**/index.ts",     // Exclude index files
+      "!src/**/*.test.tsx",   // Exclude test files
+      "!src/**/mockData.ts",  // Exclude specific files like mock data
+      "!src/app/**/layout.tsx",
+      "!src/app/**/page.tsx"
+    ],
+    coverageThreshold: {
+      global: {
+        branches: 80,   // At least 80% branch coverage globally
+        functions: 85,  // At least 85% function coverage globally
+        lines: 90,      // At least 90% line coverage globally
+        statements: 90, // At least 90% statement coverage globally
+      }
+    }
   };
   
