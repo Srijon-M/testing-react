@@ -2,6 +2,7 @@ import React from 'react';
 // import JobLocation from './JobLocation/JobLocation';
 // import { Skills } from './Skills/Skills';
 import { Counter } from './Counter/Counter';
+import MuiApp from './MuiApp/Muiapp';
 
 type GreetProps = {
     name?: string
@@ -17,6 +18,7 @@ const App = (props: GreetProps) => {
             {/* <JobLocation />
             <Skills skills={skills}/> */}
             <Counter />
+            <MuiApp />
         </>
     )
 }
